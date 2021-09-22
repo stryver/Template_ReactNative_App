@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BLUE="\e[34m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
+
+echo -e "${BLUE}[Pod-script] Link dependencies${ENDCOLOR}"
+react-native link
+echo -e "${BLUE}[Pod-script] cd ios/${ENDCOLOR}"
+cd ios
+echo -e "${BLUE}[Pod-script] Pod install${ENDCOLOR}"
+pod install
+echo -e "${BLUE}[Pod-script] cd ..${ENDCOLOR}"
+cd ..
+echo -e "${BLUE}[Pod-script] Done${ENDCOLOR}"
